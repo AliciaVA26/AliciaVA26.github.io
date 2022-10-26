@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nexusn't</title>
+        <link rel="shortcut icon" href="/Images/N.png" type="image/x-icon">
+        <link rel="stylesheet" href="/CSS/estilos.css">
+    </head>
+
+    <body>
+        <header class="hero">
+            <nav class = "nav container"> <!--Todo está dentro de un contenedor-->
+                <div  class="nav__logo"> <!--style="text-align:center" style="image-align:center"-->
+                    
+                    <img src="/Images/NexusntLogo.png" class="nav__img" >
+                </div>
+                 <a href="#" class="nav__link"><img src= "/Images/login.svg" class="expo_login" id="login"></a>
+            </nav>
+        </header>
+
+        <section class="formulario_body">
+            <div class="formulario_inicio">
+                <h1>Inicia sesión</h1>
+                <form method="POST">
+                    <div class="user_type">
+                        <select class="select-css">
+                            <option id="tipo_usuario">Maestro</option>
+                            <option selected="selected" id="tipo_usuario">Alumno</option>
+                        </select>
+                    </div>
+                    <div class="username">
+                        <input type="text" placeholder="Nombre de usuario" required id="nombre">
+                    </div>
+                    <div class="email">
+                        <input type="email" placeholder="Email" required id="email">
+                    </div>
+                    <div class="password">
+                        <input type="password" placeholder="Contraseña" required id="password">
+                    </div>
+                    <div class="_submit"> 
+                        <a href="#" class="_submittext" >Inicia</a> 
+                    </div>
+                </form>
+            </div>
+        </section>
+        
+        
+        <footer class="footer">
+            <section class="footer__container">
+                <h3 class="footer__copyright">Derechos reservados &copy; Nexus</h3>
+            </section>
+        </footer>
+        
+        
+    </body>
+    
+</html>
+
