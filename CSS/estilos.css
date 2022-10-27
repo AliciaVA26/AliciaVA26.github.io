@@ -203,6 +203,81 @@ form .password{
     color:#fff;
 }
 
+/*GRUPOS*/
+
+.titulo{
+    text-align: center;
+}
+
+/*Botones*/
+
+.botones{
+    width: 100%;
+    height: 100vh;
+    min-height: 100px;
+    max-height: 100px;
+    position: relative;
+    background-color: #fff;
+    color: #0081bf;
+}
+
+.botones_container{
+    --padding-container: 0;
+    height: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.boton_items{
+    background-color: #0081bf;
+    padding: 13px 20px;
+    border-radius: 10px;
+}
+
+.nav_boton{
+    color:#fff;
+    font-family: Roboto;
+    font-weight: 600;
+    font-size: larger;
+    text-decoration: none; /*Quita el subrayado del texto*/
+}
+
+.busca_seccion{
+    display: flex;
+}
+
+.busca_input{
+    background-color: #fff;
+    height: 50px;
+    display: block;
+    padding-left: 10px;
+    border-radius: 10px;
+    font-size:1rem;
+    outline: none;
+    margin-right: 16px;
+    border-color: #000;
+}
+
+.busca_submit{
+    margin-left: auto;
+    display: inline-block;
+    padding: 15px 20px; /*top-bottom right-left*/
+    background-color: #000;
+    color:#fff;
+    border:none;
+    font-size: larger;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+
+
 /*FOOTER*/
 
 .footer{
