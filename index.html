@@ -25,13 +25,11 @@
                 <h1>Inicia sesión</h1>
                 <form method="POST">
                     <div class="user_type">
-                        <select class="select-css">
-                            <option id="tipo_usuario">Maestro</option>
-                            <option selected="selected" id="tipo_usuario">Alumno</option>
+                        <select class="select-css" id="tipo_usuario">
+                            <option selected="selected">Selecciona tipo de usuario</option>
+                            <option>Maestro</option>
+                            <option>Alumno</option>
                         </select>
-                    </div>
-                    <div class="username">
-                        <input type="text" placeholder="Nombre de usuario" required id="nombre">
                     </div>
                     <div class="email">
                         <input type="email" placeholder="Email" required id="email">
@@ -55,6 +53,10 @@
         
         
     </body>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="/JS/configuration.js"></script>
+    <script src="/JS/funciones.js"></script>
     
 </html>
 
