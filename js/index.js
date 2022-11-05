@@ -1,11 +1,10 @@
 function login(){
-    console.log('login fun');
     var params = {
-        matricula: $('#matricula').val(),
+        user_number: $('#user_number').val(),
         password: $('#password').val()
     }
 
-    $.post("http://127.0.0.1/sessions", params, function( data ) {
+    $.post("http://137.184.208.214/sessions", params, function( data ) {
         console.log(data);
         //localStorage.setItem('token', data.token);
     });
