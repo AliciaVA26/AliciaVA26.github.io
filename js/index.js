@@ -9,7 +9,7 @@ function login(){
     }).done(function(data){
         if (data.token) {
             localStorage.setItem('token', data.token);
-            window.location.replace('/groups');
+            window.location.replace('/groups.html');
         }
     });
 }
