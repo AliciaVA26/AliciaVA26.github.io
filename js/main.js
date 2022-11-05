@@ -8,4 +8,12 @@ $(function() {
         console.log(data);
     });
 
+    $.ajax({
+        headers: { Authorization: localStorage.getItem('token') },
+        method: "GET",
+        url: "http://137.184.208.214/subjects.json"
+    }).done(function(data){
+        console.log(data);
+    });
+
 });
