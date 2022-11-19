@@ -9,6 +9,9 @@
 body{
     font-family: 'Roboto', sans-serif;
     font-family: 'Open Sans', sans-serif;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container{
@@ -274,7 +277,24 @@ form .password{
     text-decoration: none;
 }
 
+/*Grupos*/
 
+.contenedorMateria_container{
+    background-color: #0081bf;
+    width: 85%;
+    max-height: 50px;
+    min-height: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 20px;
+}
+
+.subject_text{
+    color: #fff;
+    font-weight: 600;
+    font-size: larger;
+    text-decoration: none;
+}
 
 
 
@@ -286,6 +306,7 @@ form .password{
     min-height: 100px;
     max-height: 100px;
     background-color: #a6cf30;
+    margin-top:auto;
 }
 
 .footer__container{
