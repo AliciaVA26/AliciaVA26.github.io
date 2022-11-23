@@ -28,6 +28,19 @@ function busca(){
         contenedorMateria.innerHTML = "";
 
         subject_container = "<a href="+subject_name+".html class=subject_text >"+subject_name+"</a>";
+       
+        $.ajax({
+            headers: { Authorization: localStorage.getItem('token') },
+            method: "GET",
+            url: "http://137.184.208.214/me.json"
+        }).done(function(data){
+            if(data.kind == "teacher"){
+                console.log(data.kind)
+                subject_container += "<button class=busca_submit>Editar</button>";
+                contenedorMateria.innerHTML = subject_container;
+            }
+        });
+        
         contenedorMateria.innerHTML = subject_container;
         console.log(subject_name);
         
