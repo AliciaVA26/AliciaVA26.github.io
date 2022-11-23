@@ -9,7 +9,20 @@ function login(){
     }).done(function(data){
         if (data.token) {
             localStorage.setItem('token', data.token);
-            window.location.replace('/groups.html');
+            $.ajax({
+                headers: { Authorization: localStorage.getItem('token') },
+                method: "GET",
+                url: "http://137.184.208.214/me.json"
+            }).done(function(data){
+                if(data.kind == "teacher"){
+                    window.location.replace('/js/grupos_maestro.html');
+                }
+                else{
+                    window.location.replace('/js/grupos_alumno.html');
+                }
+            });
+            
+            
         }
     });
 }
