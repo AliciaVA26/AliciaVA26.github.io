@@ -27,7 +27,7 @@ function busca(){
 
         contenedorMateria.innerHTML = "";
 
-        subject_container = "<a href=# class=subject_text>"+subject_name+"</a>";
+        subject_container = "<a href="+subject_name+".html class=subject_text >"+subject_name+"</a>";
         contenedorMateria.innerHTML = subject_container;
         console.log(subject_name);
         
