@@ -15,10 +15,9 @@ function login(){
                 url: "http://137.184.208.214/me.json"
             }).done(function(data){
                 if(data.kind == "teacher"){
-                    window.location.replace('/js/grupos_maestro.html');
-                }
-                else{
-                    window.location.replace('/js/grupos_alumno.html');
+                    window.location.replace('grupos_maestro.html');
+                } else {
+                    window.location.replace('grupos_alumno.html');
                 }
             });
             
