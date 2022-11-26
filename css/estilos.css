@@ -202,6 +202,14 @@ form .password{
 }
 
 ._submittext{
+    display: block;
+    text-decoration: none;
+    color:#fff;
+    outline: none;
+}
+
+._submittext:hover,
+._submittext:focus {
     text-decoration: none;
     color:#fff;
 }

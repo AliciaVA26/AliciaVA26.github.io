@@ -10,7 +10,7 @@
 
     <nav class="navbar navbar-expand-lg bg-light mb-5">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/grupos_alumno.html">
+        <a class="navbar-brand" href="/grupos_maestro.html">
           <img src="/img/NexusntLogo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
           Nexusn't
         </a>
@@ -23,7 +23,7 @@
               <a class="nav-link disabled" id='api_me_name'></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/grupos_alumno.html">Grupos</a>
+              <a class="nav-link" href="/grupos_maestro.html">Grupos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" onclick="logout()">Salir</a>
@@ -34,42 +34,22 @@
     </nav>
 
     <div class="container">
-      <div><h2 class='mb-4' id='api_group_header'></h2>
-      <div class='row'>
-        <div class='col-md-8'>
-
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Contenido</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Tareas</button>
-            </li>
-          </ul>
-          <div class="tab-content">
-            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel">
-              <div class="accordion mt-3" id="api_lectures"></div>
-            </div>
-            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel">
-              <ol class="list-group list-group-numbered mt-3" id='api_assignments'></ol>
-            </div>
-          </div>
-
-        </div>
-        <div class='col-md-4'>
-
-          <ul class="list-group" id='api_members'>
-            <li class="list-group-item disabled" aria-disabled="true">Miembros</li>
-          </ul>
-
+      <div class="card mb-4">
+        <div class="card-body">
+          <select class="form-select" id='api_new_group_subject_id' style='display:inline-block; width: 220px'>
+            <option selected>Materia...</option>
+          </select>
+          <button class='btn btn-primary' onclick="create_group()">Crear grupo</button>
         </div>
       </div>
+
+      <div class='row' id='api_groups_container'></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
-    <script src="/js/grupo_alumno.js"></script>
+    <script src="/js/grupos_maestro.js"></script>
     <script src="/js/main.js"></script>
 
   </body>

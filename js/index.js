@@ -20,8 +20,8 @@ function login(){
                     window.location.replace('grupos_alumno.html');
                 }
             });
-            
-            
+        } else {
+          $('#form_error').show();
         }
     });
 }

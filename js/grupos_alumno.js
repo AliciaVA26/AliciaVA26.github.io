@@ -4,7 +4,7 @@ function page_init(me) {
   for(var i = 0; i < me.groups.length; i++){
     $('#api_groups_container').append(
       '<div class="col-md-4">' +
-        '<div class="card">' +
+        '<div class="card mb-3">' +
           '<div class="card-header">' +
             me.groups[i].teacher_name +
           '</div>' +
