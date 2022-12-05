@@ -31,6 +31,17 @@ function member_add(user_id) {
     });
 }
 
+function assignment_add(user_id) {
+    $.ajax({
+        headers: { Authorization: localStorage.getItem('token') },
+        method: "POST",
+        data: { assignment: { group_id: $('#lecture_group_id').val(), description: $('#assignment_description').val(), value: $('#assignment_value').val() } },
+        url: "http://137.184.208.214/assignments.json"
+    }).done(function(data){
+      window.location.reload();
+    });
+}
+
 
 $(function() {
 

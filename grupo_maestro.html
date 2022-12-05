@@ -64,7 +64,15 @@
 
             </div>
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel">
-              <ol class="list-group list-group-numbered mt-3" id='api_assignments'></ol>
+              <div class='card my-3'>
+                <div class='card-body'>
+                  <textarea id='assignment_description' class='form-control mb-2' placeholder='Descripción'></textarea>
+                  <input type='text' id='assignment_value' class='form-control mb-2' placeholder='Valor'>
+                  <button class='btn btn-primary' onclick="assignment_add()">+ Agregar</button>
+                </div>
+              </div>
+
+              <ol class="list-group list-group-numbered" id='api_assignments'></ol>
             </div>
           </div>
 
