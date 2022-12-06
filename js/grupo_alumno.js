@@ -1,4 +1,10 @@
-function page_init(){ }
+function page_init(me){
+
+  for (var i = 0; i < me.homeworks.length; i++) {
+    $('#badge_assignment_id_' + me.homeworks[i].assignment_id).removeClass('bg-primary').addClass('bg-success');
+  }
+
+}
 
 
 $(function() {
@@ -10,6 +16,8 @@ $(function() {
     }).done(function(data){
 
       $('#api_group_header').text(data.id + '. ' + data.subject_name);
+      $('#api_token').val(localStorage.getItem('token'));
+
       for (var i = 0; i < data.members.length; i++) {
         $('#api_members').append('<li class="list-group-item">' + data.members[i].user_name +'</li>');
       }
@@ -21,9 +29,11 @@ $(function() {
               '<div class="fw-bold">Tarea</div>' +
               data.assignments[i].description +
             '</div>' +
-            '<span class="badge bg-primary rounded-pill">'+ data.assignments[i].value +'</span>' +
+            '<span class="badge bg-primary rounded-pill" id="badge_assignment_id_'+ data.assignments[i].id +'">'+ data.assignments[i].value +'</span>' +
           '</li>'
         );
+
+        $('#homework_assignment_id').append('<option value="'+ data.assignments[i].id +'">'+ data.assignments[i].description +'</option>');
       }
 
       for (var i = 0; i < data.lectures.length; i++) {
@@ -44,6 +54,16 @@ $(function() {
           '</div>'
         );
       }
+
+
+      $.ajax({
+          headers: { Authorization: localStorage.getItem('token') },
+          method: "GET",
+          url: "http://137.184.208.214/me.json"
+      }).done(function(data){
+          page_init(data);
+      });
+
 
     });
 

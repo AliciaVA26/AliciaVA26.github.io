@@ -51,7 +51,19 @@
               <div class="accordion mt-3" id="api_lectures"></div>
             </div>
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel">
-              <ol class="list-group list-group-numbered mt-3" id='api_assignments'></ol>
+              
+              <div class='card my-3'>
+                <div class='card-body'>
+                  <form action="/homeworks.json" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="token" id='api_token'/>
+                    <select class='form-select mb-3' name="homework[assignment_id]" id='homework_assignment_id'><option value>Seleccione la Tarea...</option></select>
+                    <input type="file" name="homework[document]"/>
+                    <input type='submit' value='Subir tarea' class='btn btn-primary'>
+                  </form>
+                </div>
+              </div>
+
+              <ol class="list-group list-group-numbered" id='api_assignments'></ol>
             </div>
           </div>
 
